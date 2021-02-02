@@ -4,6 +4,7 @@ var restart = document.querySelector("#bt");
 
 //grab all the squares
 var sqr = document.querySelectorAll("td");
+
 //clear all the squares
 function clearsqr()
 {
@@ -22,14 +23,19 @@ function changeMarker()
     {
       this.textContent = 'X';
       // console.log(marker)
-    }else if (this.textContent === 'X') {
+    }
+    else if (this.textContent === 'X')
+    {
       this.textContent = 'O';
-    }else {
+    }
+     else 
+     {
       this.textContent = '';
     }
 };
 
 // Use a for loop to add Event listeners to all the squares
-for (var i = 0; i < sqr.length; i++) {
+for (var i = 0; i < sqr.length; i++) 
+{
     sqr[i].addEventListener('click', changeMarker);
 }
